@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>{{ title }}</title>
+  </head>
+  <body class="p-6">
+    <img
+      style="height: 50px"
+      src="https://www.pfa.dk/-/media/logoer/pfa_mere-til-dig_logo-desktop.svg?rev=772ea897b0da4de5b291a1e77043f43d"
+      alt=""
+    />
+
+    <div>
+      <h1 class="text-xl">{{ title }}</h1>
+      <h1 class="text-lg">{{ brev.Modtager }}</h1>
+      <ul class="list-disc list-inside">
+        {% for item in brev.DaekningGruppe %}
+        <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </body>
+</html>
